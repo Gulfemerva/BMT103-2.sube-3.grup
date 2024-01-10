@@ -8,7 +8,7 @@ void dosyaya_yaz(struct calisan calisanlar[], int sayi) {
     dosya= fopen("calisan_bil.txt", "a");
 
     if (dosya == NULL) {
-        fprintf(stderr, "Dosya acilamadi! Hata Kodu: %d\n", errno);
+        fprintf(stderr, "Dosya acilamadi %d\n", errno);
         perror("Hata Mesaji");
         return;
     }
@@ -26,7 +26,7 @@ void dosyadan_oku(struct calisan calisanlar[], int *sayi) {
     dosya= fopen("calisan_bil.txt", "r");
 
     if (dosya == NULL) {
-        fprintf(stderr, "Dosya acilamadi! Hata Kodu: %d\n", errno);
+        fprintf(stderr, "Dosya acilamadi %d\n", errno);
         perror("Hata Mesaji");
         return;
     }
